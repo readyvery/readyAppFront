@@ -1116,6 +1116,10 @@ PODS:
     - React-logger (= 0.73.1)
     - React-perflogger (= 0.73.1)
   - SocketRocket (0.6.1)
+  - widget-sdk-react-native (1.2.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -1192,6 +1196,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "widget-sdk-react-native (from `../node_modules/@tosspayments/widget-sdk-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1308,6 +1313,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  widget-sdk-react-native:
+    :path: "../node_modules/@tosspayments/widget-sdk-react-native"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1373,6 +1380,7 @@ SPEC CHECKSUMS:
   React-utils: debda2c206770ee2785bdebb7f16d8db9f18838a
   ReactCommon: ddb128564dcbfa0287d3d1a2d10f8c7457c971f6
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  widget-sdk-react-native: 762d7d5d1b099cc7d542818d15d077481cc87741
   Yoga: 2b33a7ac96c58cdaa7b810948fc6a2a76ed2d108
 
 PODFILE CHECKSUM: f4d37b6a1fdad32b96acc41ee9e7a0a83d0b6096
