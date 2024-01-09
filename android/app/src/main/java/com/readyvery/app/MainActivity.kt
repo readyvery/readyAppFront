@@ -1,4 +1,4 @@
-package com.readyappfront
+package com.readyvery.app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

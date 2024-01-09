@@ -1,4 +1,4 @@
-package com.readyappfront
+package com.readyvery.app
 
 import android.app.Application
 import com.facebook.react.PackageList
