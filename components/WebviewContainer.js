@@ -2,41 +2,39 @@ import { Linking, Platform } from "react-native";
 import SendIntentAndroid from 'react-native-send-intent';
 import { WebView } from "react-native-webview";
 
-const WebviewContainer = ({ handleSetRef, handleEndLoading }) => {
-  const uri = "https://test.readyvery.com";
-
+const WebviewContainer = () => {
   const onShouldStartLoadWithRequest = (event) => {
     // URL
-    if (event.url.startsWith("http://") || event.url.startsWith("https://") || event.url.startsWith("about:blank")){
-        return true;
-      }
+    if (event.url.startsWith("http://") || event.url.startsWith("https://") ||
+              event.url.startsWith("about:blank")){return true;}
           // android
           if (Platform.OS === "android") {
-            // Android: SendIntentAndroid 사용하여 앱 열기
             SendIntentAndroid.openAppWithUri(event.url)
               .then((isOpened) => {
                 if (!isOpened) {
-                  alert("앱을 열 수 없습니다.");
+                alert(" ");
                 }
+                return false;
               }).catch((err) => {
                 console.log(err);
               });
-          } else if (Platform.OS === "ios") {
-            // iOS: Linking 사용하여 앱 열기
-            Linking.openURL(event.url).catch((err) => {
-              alert("앱을 열 수 없습니다.");
+          // iOS
+          }else if(Platform.OS ==="ios"){
+              Linking.openURL(event.url).catch((err) => {
+                alert("app sil"); 
             });
-          }
-          return false; 
+          return false;
         }
+        return false;
+      };
 
   return (
     <WebView
-      onLoadEnd={handleEndLoading}
       onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
-      ref={handleSetRef}
-      source={{ uri }}
+      style={{ flex: 1 }}
       javaScriptEnabled={true}
+      originWhitelist={["*"]}
+      source={{ uri: 'https://test.readyvery.com' }}
     />
   );
 };
