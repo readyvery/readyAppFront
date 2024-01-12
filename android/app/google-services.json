@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "674033370078",
+    "project_id": "readyvery-f0d60",
+    "storage_bucket": "readyvery-f0d60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674033370078:android:811c5a1ecc6400cd78934f",
+        "android_client_info": {
+          "package_name": "com.readyvery.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQtkABbg4BAM_6ZT6gELPCgcW4h7wHihk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

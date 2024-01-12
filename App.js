@@ -1,25 +1,28 @@
-import React, { useRef } from 'react';
+import messaging from '@react-native-firebase/messaging';
+import { useEffect } from 'react';
 import WebviewContainer from './components/WebviewContainer';
+
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+  console.log('[Background Remote Message]', remoteMessage);
+});
+
 const App = () => {
-  let webviewRef = useRef();
+  
+  const getFcmToken = async () => {
+    const fcmToken = await messaging().getToken();
+    console.log('[FCM Token] ', fcmToken);
+  }
 
-  const handleSetRef = _ref => {
-    webviewRef = _ref;
-  };
-
-  const handleEndLoading = e => {
-    console.log("handleEndLoading");
-
-    webviewRef.postMessage("로딩 완료시 webview로 정보를 보내는 곳");
-  };
+  useEffect(() => {
+    getFcmToken();
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      console.log('[Remote Message] ', JSON.stringify(remoteMessage));
+    });
+    return unsubscribe;
+  }, []);
 
   return (
-    <WebviewContainer
-      webviewRef={webviewRef}
-      handleSetRef={handleSetRef}
-      handleEndLoading={handleEndLoading}
-    />
-  );
+    <WebviewContainer/> );
 };
 
 export default App;
