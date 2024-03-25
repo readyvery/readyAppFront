@@ -34,8 +34,8 @@ const WebviewContainer = () => {
       style={{ flex: 1 }}
       javaScriptEnabled={true}
       originWhitelist={["*"]}
-      source={{ uri: 'https://test.readyvery.com' }}
-      // source={{ uri: 'https://readyvery.com/index.html' }}
+      // source={{ uri: 'https://test.readyvery.com' }}
+      source={{ uri: 'https://readyvery.com/index.html' }}
     />
   );
 };
