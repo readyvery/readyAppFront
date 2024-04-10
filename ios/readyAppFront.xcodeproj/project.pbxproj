@@ -32,6 +32,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* readyAppFrontTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = readyAppFrontTests.m; sourceTree = "<group>"; };
 		0217A6C92B4D3BFF00C0C714 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02C11B842BC6937700B72632 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* readyAppFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = readyAppFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = readyAppFront/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = readyAppFront/AppDelegate.mm; sourceTree = "<group>"; };
@@ -85,6 +86,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		02C11B822BC6932700B72632 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				02C11B842BC6937700B72632 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* readyAppFront */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +127,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				02C11B822BC6932700B72632 /* ci_scripts */,
 				0217A6C92B4D3BFF00C0C714 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* readyAppFront */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
