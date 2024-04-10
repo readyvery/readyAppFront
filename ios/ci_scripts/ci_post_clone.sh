@@ -19,4 +19,3 @@ CONFIG_FILENAME="${PARTS[1]}.xcconfig"
 CONFIG_FILE_PATH="$FOLDER_PATH/$CONFIG_FILENAME"
 
 # 생성된 *.xconfig 파일 내용 출력
-cat "$CONFIG_FILE_PATH"
