@@ -3,19 +3,25 @@
 #  ci_post_clone.sh
 #  readyAppFront
 #
-#  Created by 최유빈 on 4/10/24.
+#  Created by 최유빈 on 4/13/24.
 #  
 
-# *.xconfig 파일이 생성될 폴더 경로
-FOLDER_PATH = "/Volumes/workspace/repository/readyAppFront"
+ # fail if any command fails
 
-# PARTS 배열의 두 번째 요소가 "Scheme Name"에 해당
-IFS='-' read -ra PARTS <<< "$CI_XCODE_SCHEME"
+ echo "🧩 Stage: Post-clone is activated .... "
 
-# *.xconfig 파일이름
-CONFIG_FILENAME="${PARTS[1]}.xcconfig"
+ set -e
+ # debug log
+ set -x
 
-# *.xconfig 파일의 전체 경로 계산
-CONFIG_FILE_PATH="$FOLDER_PATH/$CONFIG_FILENAME"
+ # Install dependencies using Homebrew. This is MUST! Do not delete.
+ brew install node yarn cocoapods fastlane
 
-# 생성된 *.xconfig 파일 내용 출력
+ # Install yarn and pods dependencies.
+ # If you're using Flutter or Swift
+ # just install pods by "pod install" command
+ ls && cd .. && yarn && pod install
+
+ echo "🎯 Stage: Post-clone is done .... "
+
+ exit 0
