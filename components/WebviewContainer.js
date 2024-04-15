@@ -3,6 +3,19 @@ import SendIntentAndroid from 'react-native-send-intent';
 import { WebView } from "react-native-webview";
 
 const WebviewContainer = () => {
+  const scrollToTop = `
+    window.scrollTo(0, 0);
+    true; // for iOS to ensure the script runs
+  `;
+
+  const onNavigationStateChange = (navState) => {
+    if (navState.url && !navState.url.includes('about:blank')) {
+      this.webview.injectJavaScript(scrollToTop);
+    }
+  };
+  
+  // 여기까지 웹 뷰 내에서 웹페이지 이동시 상단으로 고정되도록 하는 코드
+
   const onShouldStartLoadWithRequest = (event) => {
     // URL
     if (event.url.startsWith("http://") || event.url.startsWith("https://") ||
@@ -27,10 +40,12 @@ const WebviewContainer = () => {
         }
         return false;
       };
-
+  
   return (
     <WebView
+      ref={ref => this.webview = ref}
       onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
+      onNavigationStateChange={onNavigationStateChange}
       style={{ flex: 1 }}
       javaScriptEnabled={true}
       originWhitelist={["*"]}

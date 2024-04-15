@@ -1,13 +1,15 @@
+import { useEffect } from 'react';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import SplashScreen from "react-native-splash-screen";
 import WebviewContainer from './components/WebviewContainer';
 
 const App = () => {
 
-  // useEffect(()=>{
-  //   setTimeout(()=>{
-  //     SplashScreen.hide();
-  //   }, 1000);
-  // },[]);
+  useEffect(()=>{
+    setTimeout(()=>{
+      SplashScreen.hide();
+    }, 1000);
+  },[]);
 
   return (
     <>
