@@ -12,7 +12,7 @@ const App = () => {
     setTimeout(() => {
       SplashScreen.hide();
     }, 1000); //스플래시 활성화 시간
-  });
+  }, []);
   // const getFcmToken = async () => {
   //   const fcmToken = await messaging().getToken();
   //   console.log('[FCM Token] ', fcmToken);
