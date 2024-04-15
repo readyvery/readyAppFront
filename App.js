@@ -1,30 +1,13 @@
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-import SplashScreen from "react-native-splash-screen";
 import WebviewContainer from './components/WebviewContainer';
-
-// messaging().setBackgroundMessageHandler(async remoteMessage => {
-//   console.log('[Background Remote Message]', remoteMessage);
-// });
 
 const App = () => {
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      SplashScreen.hide();
-    }, 1000);
-  },[]);
-  // const getFcmToken = async () => {
-  //   const fcmToken = await messaging().getToken();
-  //   console.log('[FCM Token] ', fcmToken);
-  // }
-
-  // useEffect(() => {
-  //   getFcmToken();
-  //   const unsubscribe = messaging().onMessage(async remoteMessage => {
-  //     console.log('[Remote Message] ', JSON.stringify(remoteMessage));
-  //   });
-  //   return unsubscribe;
-  // }, []);
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     SplashScreen.hide();
+  //   }, 1000);
+  // },[]);
 
   return (
     <>
