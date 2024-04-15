@@ -11,7 +11,7 @@ const App = () => {
   useEffect(()=>{
     setTimeout(()=>{
       SplashScreen.hide();
-    },1000)
+    }, 1000);
   },[]);
   // const getFcmToken = async () => {
   //   const fcmToken = await messaging().getToken();
