@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  readyAppFront
+
+  Created by 최유빈 on 5/13/24.
+  
+*/
+"CFBundleDisplayName" = "레디베리";
+"CFBundleName" = "레디베리";
+
